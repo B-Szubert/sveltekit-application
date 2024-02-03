@@ -31,6 +31,8 @@
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
+		color: bule;
+
     }
 
     .form-group {
