@@ -26,32 +26,6 @@
 	</form>
 </div>
 
-<script>
-	import { PrismaClient } from '@prisma/client'
-
-	const prisma = new PrismaClient()
-
-	export async function post(request) {
-		const { nazwa, skladniki, instrukcje } = request.body
-
-		const newRecipe = await prisma.recipe.create({
-			data: {
-				nazwa,
-				skladniki,
-				instrukcje
-			}
-		})
-
-		return {
-			status: 200,
-			body: {
-				message: 'Recipe added successfully',
-				recipe: newRecipe
-			}
-		}
-	}
-</script>
-
 <style>
     .text-column {
         width: 100%;
